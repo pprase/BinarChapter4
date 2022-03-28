@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lblAtas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vsTengah"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblKertas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="-30sp"
+            android:rotation="-10"
+            android:text="@string/kertasAtas"
+            android:textColor="@color/biru"
+            android:textSize="35sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblGunting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:rotation="-10"
+            android:text="@string/GuntingAtas"
+            android:textColor="@color/ijo"
+            android:textSize="35sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblKertas" />
+
+        <TextView
+            android:id="@+id/lblBatu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:rotation="-10"
+            android:text="@string/BatuAtas"
+            android:textColor="@color/kuning"
+            android:textSize="35sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblGunting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/vsTengah"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:rotation="-15"
+        android:text="@string/VsTengah"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="autoSizeTextType" />
+
+    <TextView
+        android:id="@+id/txtPemain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Pemain_1"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/cardimage1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/vsTengah" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardimage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/vsTengah"
+        app:layout_constraintTop_toBottomOf="@id/lblAtas">
+
+        <ImageView
+            android:id="@+id/batu_kiri"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_batu"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardimage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/vsTengah"
+        app:layout_constraintTop_toBottomOf="@id/cardimage1">
+
+        <ImageView
+            android:id="@+id/guntingkiri"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_gunting"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardimage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/vsTengah"
+        app:layout_constraintTop_toBottomOf="@id/cardimage2">
+
+        <ImageView
+            android:id="@+id/kertaskiri"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_kertas"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtComputer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/Computer"
+        android:textColor="@color/purple_700"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/cardimage4"
+        app:layout_constraintLeft_toRightOf="@id/vsTengah"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardimage4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toRightOf="@id/vsTengah"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblAtas">
+
+        <ImageView
+            android:id="@+id/batu_kanan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_batu"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardimage5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toRightOf="@id/vsTengah"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardimage4">
+
+        <ImageView
+            android:id="@+id/guntingkanan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_gunting"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardimage6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toRightOf="@id/vsTengah"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardimage5">
+
+        <ImageView
+            android:id="@+id/kertaskanan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_kertas"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
